@@ -1,0 +1,30 @@
+cf-ray: CloudFlare
+cf-request-id: CloudFlare
+expect-ct: CloudFlare
+cf-cache-status: CloudFlare
+x-cache: Amazon Cloudfront
+via: Varnish, Google Cloud, Amazon Cloudfront, Fastly, Vegur, Citrix ADC, ALProxy, Ipswitch-IMail, Cisco ACE
+x-powered-by: ...
+server: ...
+x-redirect-by: ...
+etag: ...
+x-request-id: ...
+x-wix-request-id: wix
+x-served-by: Namecheap
+host-header: SiteGround, BlueHost
+x-proxy-cache: Nginx
+x-varnish: Varnish
+x-adblock-key: AdBlock
+x-aspnet-version: ASP.NET
+x-amz-cf-pop: Amazon Cloudfront
+x-amz-cf-id: Amazon Cloudfront
+x-shopid: Shopify
+x-shopify-stage: Shopify
+x-sorting-hat-podid: Shopify
+x-generator: Drupal
+x-drupal-cache: Drupal
+x-github-request-id: GitHub
+x-host: Weebly
+x-litespeed-cache: LiteSpeed
+x-fastly-request-id: Fastly (CDN)
+x-hacker: Automattic (PAAS)

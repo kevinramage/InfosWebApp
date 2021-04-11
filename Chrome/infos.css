@@ -1,0 +1,20 @@
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.info, .technology, .cookie {
+  height: 18px;
+}
+
+.info .label, .technology .label, .cookie .label {
+  display: inline-block;
+  width: 60px;
+  font-weight: 600;
+}
+
+.info .value,.technology .value, .cookie .value  {
+  display: inline-block;
+  margin-right: 20px;
+}

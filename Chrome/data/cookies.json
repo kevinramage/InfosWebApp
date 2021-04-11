@@ -1,0 +1,12 @@
+[
+    { "name": "asp.net_sessionid", "language": "Asp.net" },
+    { "name": "aspsessionid", "language": "Asp" },
+    { "name": "cfid", "language": "Cold Fusion" },
+    { "name": "cftoken", "language": "Cold Fusion" },
+    { "name": "jsessionid", "language": "J2EE" },
+    { "name": "pegarules", "language": "Pega" },
+    { "name": "phpsessid", "language": "Php" },
+    { "name": "sessid", "language": "Php" },
+    { "name": "viewstate", "language": "Asp" },
+    { "name": "zenid", "language": "ZenCart" }
+]

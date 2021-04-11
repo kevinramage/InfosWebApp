@@ -1,0 +1,23 @@
+[
+    { "extension": "asp", "language": "Asp" },
+    { "extension": "aspx", "language": "Asp.net" },
+    { "extension": "asa", "language": "Asp" },
+    { "extension": "cfm", "language": "ColdFusion" },
+    { "extension": "cfml", "language": "ColdFusion" },
+    { "extension": "cfc", "language": "ColdFusion" },
+    { "extension": "dbm", "language": "ColdFusion" },
+    { "extension": "jsp", "language": "J2EE" },
+    { "extension": "jspx", "language": "J2EE" },
+    { "extension": "jsw", "language": "J2EE" },
+    { "extension": "jsv", "language": "J2EE" },
+    { "extension": "jspf", "language": "J2EE" },
+    { "extension": "pl", "language": "Perl" },
+    { "extension": "pm", "language": "Perl" },
+    { "extension": "cgi", "language": "Perl" },
+    { "extension": "phtml", "language": "Php" },
+    { "extension": "php", "language": "Php" },
+    { "extension": "php3", "language": "Php" },
+    { "extension": "php4", "language": "Php" },
+    { "extension": "php5", "language": "Php" },
+    { "extension": "inc", "language": "Php" }
+]

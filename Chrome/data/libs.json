@@ -1,0 +1,16 @@
+[
+    { "name": "jQuery", "version": "3.4.1", "versionDetails": "uncompressed", "checksum": "f5ad72b13a3ba6614caeb70e4306d690f6939b752e28dc0ec48c2182647761f5" },
+    { "name": "jQuery", "version": "3.4.1", "versionDetails": "minified", "checksum": "4c24dfd28784ad2befb3dafaac6bf1ed4e7cd58cce713d9a0b228d426e812baf" },
+    { "name": "jQuery", "version": "3.4.1", "versionDetails": "slim", "checksum": "7cc06a07f8766cbbea4c2167724dac06680487b8f320edc47b741f964e2ec58a" },
+    { "name": "jQuery", "version": "3.4.1", "versionDetails": "slim minified", "checksum": "e055e0610d703c03d90e83102c11e8cf148a72ee83fef7c13a170a6a7e6b7cb6" },
+
+    { "name": "bootstrap", "version": "4.4.1", "versionDetails": "uncompressed", "checksum": "eba7fab904d092f1c5f23a6788b5898e7b5e11f990682fed01315ec3f9d3040f" },
+    { "name": "bootstrap", "version": "4.4.1", "versionDetails": "minified", "checksum": "5aa53525abc5c5200c70b3f6588388f86076cd699284c23cda64e92c372a1548" },
+    { "name": "bootstrap", "version": "4.4.1", "versionDetails": "bundle uncompressed", "checksum": "675b7ec3167b121e53d6c2ba69e3d63211103a0851e236552f08f0ad464045e1" },
+    { "name": "bootstrap", "version": "4.4.1", "versionDetails": "bundle minified", "checksum": "394156ee114ed3faf968419340ecfd17f69740eb7e4f0a88d59e1f6d5bf0c34e" },
+
+    { "name": "chartJS", "version": "4.4.1", "versionDetails": "uncompressed", "checksum": "3341155e6ce2afbcd91a7a757d197958d5a0173b2b6b2f9e764828717ac39904" },
+    { "name": "chartJS", "version": "4.4.1", "versionDetails": "minified", "checksum": "09f704443e0ebf8fa529b59b62a5c3e9a14cf4ce7580de06504b4386458004ca" },
+    { "name": "chartJS", "version": "4.4.1", "versionDetails": "bundle uncompressed", "checksum": "2e5d16bf348589c7f94404a122cb83dbcd42dd5b83de780c541d457ecfcf3a06" },
+    { "name": "chartJS", "version": "4.4.1", "versionDetails": "bundle minified", "checksum": "5c5dbd081c14d4c58b686127b042e8814e98eab71ce670a4861c7cf6714c2034" }
+]

@@ -1,0 +1,10 @@
+x-powered-by, server, via, x-aspnet-version
+Verifier la présence d'une version ?
+https://webtechsurvey.com/response-header/x-powered-by
+https://webtechsurvey.com/response-header/server
+https://webtechsurvey.com/response-header/via
+https://webtechsurvey.com/response-header/x-aspnet-version
+
+x-powered-by, server, via, x-redirect-by: Récupérer la technologie
+
+etag

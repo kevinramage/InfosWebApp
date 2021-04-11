@@ -1,0 +1,40 @@
+{
+    "name": "InfosWebApp",
+    "description": "Identify web servers, languages and libraries used to build a web application",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "worker.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+          "matches": [ "http://*/*", "https://*/*" ],
+          "js": [
+              "business/domAnalyzer.js",
+              "business/headersAnalyzer.js",
+              "lib/idb.js",
+              "lib/sjcl.js",
+              "lib/sha256.js",
+              "dto/application.js",
+              "contentScript.js"
+          ]
+        }
+    ],
+    "options_ui": {
+        "open_in_tab": true,
+        "page": "infos.html"
+     },
+    "permissions": [ "tabs", "webRequest" ],
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ],
+    "web_accessible_resources": [{
+        "resources": ["data/libs.json", "data/headers.json", "data/cookies.json", "data/extensions.json"],
+        "matches": [ "http://*/*", "https://*/*" ],
+        "extension_ids": []
+       }]
+  }

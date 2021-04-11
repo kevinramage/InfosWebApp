@@ -3,7 +3,8 @@ class HeadersAnalyzer {
         this.db = db;
         this.application = application;
         this.customHeaders = [];
-        this.serverHeaders = ["x-powered-by", "server", "via", "x-turbo-charged-by", "x-powered-by-plesk", "x-cdn", "x-server-powered-by"];
+        this.serverHeaders = ["x-powered-by", "server", "via", "x-turbo-charged-by", "x-powered-by-plesk", "x-cdn", 
+        "x-server-powered-by", "x-powered-cms", "powered-by", "x-provided-by", "x-content-powered-by"];
         this.classicalCookies = [];
         this.classicalExtensions = [];
     }
@@ -59,7 +60,9 @@ class HeadersAnalyzer {
             this.analyzeCustomHeaders(headers);
             this.analyzeServerHeaders(headers);
             this.analyzeASPNetHeader(headers);
+            this.analyzeFlywheelHeader(headers);
             this.analyzeSetCookieHeaders(headers);
+            this.analyzeHttpdModPhpHeader(headers);
             this.addUrls(headers);
             this.analyseCookies();
             this.analyseExtensions();
@@ -104,7 +107,7 @@ class HeadersAnalyzer {
         });
     }
 
-    analyzeASPNetHeader(header) {
+    analyzeASPNetHeader(headers) {
 
         // x-aspnet-version
         let serverHeader = headers.find(header => { return header.name.toLowerCase() == "x-aspnet-version" });
@@ -118,7 +121,7 @@ class HeadersAnalyzer {
             const regex = /(?<version>[0-9]+(\.[0-9]+)*)/g;
             const match = regex.exec(header.value);
             if (match && match.groups) {
-                technology.verson = match.groups.version;
+                technology.version = match.groups.version;
             }
             
             // Add technology
@@ -137,13 +140,44 @@ class HeadersAnalyzer {
             const regex = /(?<version>[0-9]+(\.[0-9]+)*)/g;
             const match = regex.exec(header.value);
             if (match && match.groups) {
-                technology.verson = match.groups.version;
+                technology.version = match.groups.version;
             }
             
             // Add technology
             this.application.addTechnology(technology);
         }
         
+    }
+
+    analyzeFlywheelHeader(headers) {
+
+        let serverHeader = headers.find(header => { return header.name.toLowerCase() == "x-fw-version" });
+        if (serverHeader) {
+
+            // Create technology
+            const technology = new Technology();
+            technology.name = "Flywheel";
+            
+            // Detect version
+            const regex = /(?<version>[0-9]+(\.[0-9]+)*)/g;
+            const match = regex.exec(header.value);
+            if (match && match.groups) {
+                technology.version = match.groups.version;
+            }
+            
+            // Add technology
+            this.application.addTechnology(technology);
+        }
+    }
+
+    analyzeHttpdModPhpHeader(headers) {
+
+        let serverHeader = headers.find(header => { return header.name.toLowerCase() == "x-httpd-modphp" });
+        if (serverHeader) {
+
+            // Add technology
+            this.application.addLanguage("Php");
+        }
     }
 
     analyzeSetCookieHeaders(headers) {

@@ -45,5 +45,21 @@
     { "headerName": "x-server-powered-by", "application": "EnginTron" },
     { "headerName": "x-nananana", "application": "BatCache" },
     { "headerName": "x-rack-cache", "application": "RackCache" },
-    { "headerName": "x-amz-bucket-region", "application": "AWS" }
+    { "headerName": "x-amz-bucket-region", "application": "AWS" },
+    { "headerName": "x-webcom-cache-status", "application": "Web.com" },
+    { "headerName": "x-edge-location-klb", "application": "Kinsta" },
+    { "headerName": "x-httpd-modphp", "application": "Apache Httpd" },
+    { "headerName": "ms-author-via", "application": "WebDAV" },
+    { "headerName": "x-kinsta-cache", "application": "Kinsta" },
+    { "headerName": "fastly-restarts", "application": "Fastly" },
+    { "headerName": "x-litespeed-cache-control", "application": "LiteSpeed" },
+    { "headerName": "x-litespeed-tag", "application": "LiteSpeed" },
+    { "headerName": "x-akamai-transformed", "application": "Akamai" },
+    { "headerName": "x-fw-dynamic", "application": "Flywheel" },
+    { "headerName": "x-nginx-cache-status", "application": "Nginx" },
+    { "headerName": "x-ah-environment", "application": "Acquia Cloud" },
+    { "headerName": "cf-railgun", "application": "Cloud Flare" },
+    { "headerName": "x-page-speed", "application": "Google PageSpeed" },
+    { "headerName": "x-oracle-dms-ecid", "application": "Oracle DMS" },
+    { "headerName": "x-oracle-dms-rid", "application": "Oracle DMS" }
 ]

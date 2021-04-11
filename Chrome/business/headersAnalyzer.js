@@ -15,7 +15,7 @@ class HeadersAnalyzer {
             this.initCookies(),
             this.initExtensions()
         ];
-        return new Promise.all(promises);
+        return Promise.all(promises);
     }
 
     initHeaders() {
@@ -54,7 +54,7 @@ class HeadersAnalyzer {
         });
     }
 
-    async run(headers) {
+    async run(headers, url) {
         await this.init();
         if (headers) {
             this.analyzeCustomHeaders(headers);
@@ -63,7 +63,7 @@ class HeadersAnalyzer {
             this.analyzeFlywheelHeader(headers);
             this.analyzeSetCookieHeaders(headers);
             this.analyzeHttpdModPhpHeader(headers);
-            this.addUrls(headers);
+            this.addUrl(url);
             this.analyseCookies();
             this.analyseExtensions();
             this.update();
@@ -191,8 +191,8 @@ class HeadersAnalyzer {
         }
     }
 
-    addUrls(headers) {
-        this.application.addUrl(headers.url);
+    addUrl(url) {
+        this.application.addUrl(url);
     }
 
     analyseCookies() {

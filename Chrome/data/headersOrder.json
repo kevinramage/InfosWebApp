@@ -1,0 +1,32 @@
+[
+    {
+        "application": "httpd",
+        "version": "2.4.12",
+        "headers": [ "accept-ranges", "connection", "content-length", "content-type", "date", "etag", "keep-alive", "last-modified" ] 
+    },
+    {
+        "application": "httpd",
+        "version": "2.4.46",
+        "headers": [ "accept-ranges", "content-length", "content-type", "date", "etag", "last-modified" ] 
+    },
+    {
+        "application": "tomcat",
+        "version": "6",
+        "headers": [ "accept-ranges", "content-length", "content-type", "date", "etag", "last-modified" ] 
+    },
+    {
+        "application": "tomcat",
+        "version": "6",
+        "headers": [ "accept-ranges", "content-length", "content-type", "date", "etag", "last-modified" ] 
+    },
+    {
+        "application": "tomcat",
+        "version": "8",
+        "headers": [ "content-type", "date", "transfer-encoding" ] 
+    },
+    {
+        "application": "tomcat",
+        "version": "9",
+        "headers": [ "connection","content-language", "content-length", "date", "keep-alive" ] 
+    }
+]

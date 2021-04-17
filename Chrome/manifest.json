@@ -15,6 +15,7 @@
           "js": [
               "business/domAnalyzer.js",
               "business/headersAnalyzer.js",
+              "business/fingerPrintAnalyzer.js",
               "lib/idb.js",
               "lib/sjcl.js",
               "lib/sha256.js",
@@ -33,7 +34,10 @@
         "https://*/*"
     ],
     "web_accessible_resources": [{
-        "resources": ["data/libs.json", "data/headers.json", "data/cookies.json", "data/extensions.json"],
+        "resources": [
+            "data/libs.json", "data/headers.json", "data/cookies.json", "data/extensions.json",
+            "data/headers/acceptRanges.json", "data/headers/contentType.json", "data/headers/eTag.json"
+        ],
         "matches": [ "http://*/*", "https://*/*" ],
         "extension_ids": []
        }]

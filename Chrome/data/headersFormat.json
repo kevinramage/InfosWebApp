@@ -1,0 +1,37 @@
+[
+    { 
+        "header": "content-type",
+        "values": [
+            {
+                "value": "/text\\/html/g",
+                "applications": [
+                    { "name": "httpd", "version": "2.4.12" },
+                    { "name": "httpd", "version": "2.4.46" },
+                    { "name": "tomcat", "version": "6" }
+                ]
+            },
+            { 
+                "value": "/text\\/html;charset=UTF\\-8/g",
+                "applications": [
+                    { "name": "tomcat", "version": "8" },
+                    { "name": "tomcat", "version": "9" }
+                ]
+            }
+        ]  
+    },
+    {
+        "header": "etag",
+        "values": [
+            {
+                "value": "/\"(.){16}\"/g",
+                "applications": [
+                    { "name": "httpd", "version": "2.4.12" },
+                    { "name": "httpd", "version": "2.4.46" }
+                ]
+            },
+            {
+                "value": "/W\\/\".{4}-1491118183000\"/g"
+            }
+        ]
+    }
+]

@@ -6,6 +6,7 @@ idb.openDB('technoInfoApp', 1, {
         db.createObjectStore('libs');
         db.createObjectStore('urls');
         db.createObjectStore('languages');
+        db.createObjectStore('fingerprints');
     },
 }).then(db => {
 
@@ -21,8 +22,14 @@ idb.openDB('technoInfoApp', 1, {
         if (request.type === "GetApplication") {
             sendResponse(domAnalyzer.application);
         } else if (request.type === "EmitHeaders") {
+            
+            // Run headers analyzer
             const headersAnalyzer = new HeadersAnalyzer(db, application);
             headersAnalyzer.run(request.data.headers, request.data.url);
+
+            // Run FingerPrint analyzer
+            const fingerPrintAnalyzer = new FingerPrintAnalyzer(db, application);
+            fingerPrintAnalyzer.run(request.data.headers);
         } else {
             sendResponse("KO");
         }

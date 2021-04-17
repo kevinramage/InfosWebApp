@@ -9,6 +9,7 @@ class Application {
         this.cookies = [];
         this.urls = [];
         this.languages = [];
+        this.fingerPrints = [];
     }
 
     addLib(lib) {
@@ -67,6 +68,17 @@ class Application {
 
     existsUrl(url) {
         return !!this.urls.find(u => { return u.toLowerCase() == url.toLowerCase(); })
+    }
+
+    addFingerPrint(fingerPrint) {
+        const exists = this.existsFingerPrint(fingerPrint);
+        if (!exists) {
+            this.fingerPrints.push(fingerPrint);
+        }
+    }
+
+    existsFingerPrint(fingerPrint) {
+        return !!this.fingerPrints.find(f => { return f.key == fingerPrint.key; })
     }
 }
 
@@ -129,5 +141,12 @@ class Cookie {
                 this.httpOnly = true;
             }
         }
+    }
+}
+
+class FingerPrint {
+    constructor() {
+        this.key = "";
+        this.applications = "";
     }
 }

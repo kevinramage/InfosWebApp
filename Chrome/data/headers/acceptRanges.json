@@ -1,0 +1,4 @@
+[
+    { "application": "nginx", "version": "1.18.0", "value": "bytes"},
+    { "application": "nginx", "version": "1.19.0", "value": "bytes"}
+]

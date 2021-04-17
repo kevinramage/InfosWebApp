@@ -10,7 +10,7 @@ class HeadersAnalyzer {
     }
 
     init() {
-        const promises = [ 
+        const promises = [
             this.initHeaders(),
             this.initCookies(),
             this.initExtensions()

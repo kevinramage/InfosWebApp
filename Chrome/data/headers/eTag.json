@@ -1,0 +1,4 @@
+[
+    { "application": "nginx", "version": "1.18.0", "value": "\"[0-9a-fA-F]{8}\\-[0-9a-fA-F]{3}\""},
+    { "application": "nginx", "version": "1.19.0", "value": "\"[0-9a-fA-F]{8}\\-[0-9a-fA-F]{3}\""}
+]

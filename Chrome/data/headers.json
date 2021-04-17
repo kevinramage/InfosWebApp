@@ -61,5 +61,12 @@
     { "headerName": "cf-railgun", "application": "Cloud Flare" },
     { "headerName": "x-page-speed", "application": "Google PageSpeed" },
     { "headerName": "x-oracle-dms-ecid", "application": "Oracle DMS" },
-    { "headerName": "x-oracle-dms-rid", "application": "Oracle DMS" }
+    { "headerName": "x-oracle-dms-rid", "application": "Oracle DMS" },
+    { "headerName": "x-tumblr-user", "application": "Tumblr" },
+    { "headerName": "x-tumblr-pixel", "application": "Tumblr" },
+    { "headerName": "x-tumblr-pixel-0", "application": "Tumblr" },
+    { "headerName": "x-tumblr-pixel-1", "application": "Tumblr" },
+    { "headerName": "x-pass-why", "application": "WP Engine" },
+    { "headerName": "x-amz-version-id", "application": "AWS" },
+    { "headerName": "x-varnish-cache", "application": "Varnish" }
 ]

@@ -12,6 +12,85 @@ class Application {
         this.fingerPrints = [];
     }
 
+    read(db) {
+        return new Promise(async resolve => {
+            await this.readApplicationInfo(db);
+            await this.readTechnologies(db);
+            await this.readLibs(db);
+            await this.readCookies(db);
+            resolve();
+        });
+    }
+
+    readApplicationInfo(db) {
+        return new Promise((resolve) => {
+            db.getAll("application").then(applications => {
+                if (applications && applications.length > 0) {
+                    this.description = applications[0].description;
+                    this.domain  = applications[0].domain;
+                    this.title = applications[0].title;
+                    this.keywords = applications[0].keywords;
+                }
+                resolve();
+            });
+        });
+    }
+
+    readTechnologies(db) {
+        return new Promise((resolve) => {
+            db.getAll("technologies").then(technologies => {
+                technologies.forEach(data => {
+                    const technology = new Technology();
+                    technology.name = data.name;
+                    technology.version = data.version;
+                    technology.versionDetails = data.versionDetails;
+                    technology.category = data.category;
+                    this.technologies.push(technology);
+                });
+                resolve();
+            });
+        });
+    }
+
+    readLibs(db) {
+        return new Promise((resolve) => {
+            db.getAll("libs").then(libs => {
+                libs.forEach(data => {
+                    const lib = new Lib();
+                    lib.name = data.name;
+                    lib.checksum = data.checksum;
+                    lib.technology = data.technology;
+                    lib.version = data.version;
+                    lib.versionDetails = data.versionDetails;
+                    lib.url = data.url;
+                    this.libs.push(lib);
+                });
+                resolve();
+            });
+        });
+    }
+
+    readCookies(db) {
+        return new Promise((resolve) => {
+            db.getAll("cookies").then(cookies => {
+                cookies.forEach(data => {
+                    const cookie = new Cookie();
+                    cookie.cookieName = data.cookieName;
+                    cookie.expires = data.expires;
+                    cookie.maxAge = data.maxAge;
+                    cookie.domain = data.domain;
+                    cookie.path = data.path;
+                    cookie.secure = data.secure;
+                    cookie.httpOnly = data.httpOnly;
+                    cookie.sameSite = data.sameSite;
+                    cookie.sessionIdLength = data.sessionIdLength;
+                    this.cookies.push(cookie);
+                });
+                resolve();
+            });
+        });
+    }
+
     addLib(lib) {
         const exists = this.existsLib(lib);
         if (!exists) {
@@ -118,9 +197,15 @@ class Cookie {
     fromString(setCookieHeader) {
         const args = setCookieHeader.split(";");
         if (args.length > 0) {
+            if (args[0].indexOf("=") > -1) {
             this.cookieName = args[0].split("=")[0].trim();
             const cookieValue = args[0].split("=")[1].trim();
             this.sessionIdLength = cookieValue.length;
+            } else {
+                console.error("An error occured during fromString - not equals symbol: " + args[0]);
+            }
+        } else {
+            console.error("An error occured during fromString - Invalid args: " + args);
         }
         for (var i = 1; i < args.length; i++) {
             if (args[i].includes("=")) {

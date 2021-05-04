@@ -1,20 +1,24 @@
-ul {
-  list-style-type: none;
-  margin: 0px;
-  padding: 0px;
+.col-auto {
+    display: block;
+}
+.col-form-label {
+    display: inline-block;
+    width: 100px;
+}
+.form-control-plaintext {
+    display: inline-block;
+    width: auto;
 }
 
-.info, .technology, .cookie {
-  height: 18px;
+#sctTechnologyInfos, #sctLibrairiesInfos, #sctCookiesInfos {
+    display: none;
 }
 
-.info .label, .technology .label, .cookie .label {
-  display: inline-block;
-  width: 60px;
-  font-weight: 600;
+#sctTechnologyInfos th:nth-child(4), #sctTechnologyInfos th:nth-child(5) {
+    width: 150px;
 }
 
-.info .value,.technology .value, .cookie .value  {
-  display: inline-block;
-  margin-right: 20px;
+#sctCookiesInfos th {
+    margin-left: 10px;
+    margin-right: 10px;
 }

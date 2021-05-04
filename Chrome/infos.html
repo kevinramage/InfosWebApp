@@ -1,25 +1,114 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="infos.css" />
     <script type="text/javascript" src="infos.js"></script>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="infos.css" />
   </head>
   <body>
-    <h3>Applications</h3>
-    <div>
-      <select id="selectApplications">
-      </select>
-      <button id="btnRefresh">Refresh</button>
-    </div>
-    
-    <h3>Informations</h3>
-    <div id='txtInfos'></div>
+    <!-- Header navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Infos Web App</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Select applications
+            </a>
+            <ul id="lstApps" class="dropdown-menu" aria-labelledby="navbarDropdown">
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <button id="btnRefresh" class="btn btn-outline-success" type="submit">Refresh</button>
+        </form>
+      </div>
+    </nav>
 
-    <h4>Technologies</h4>
-    <div id='txtTechnologies'></div>
+    <!-- navigation tab -->
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a id="lnkInfos" class="nav-link active" aria-current="page" href="#">Informations</a>
+      </li>
+      <li class="nav-item">
+        <a id="lnkTechnologies" class="nav-link" href="#">Technologies</a>
+      </li>
+      <li class="nav-item">
+        <a id="lnkLibrairies" class="nav-link" href="#">Librairies</a>
+      </li>
+      <li class="nav-item">
+        <a id="lnkCookies" class="nav-link" href="#">Cookies</a>
+      </li>
+    </ul>
 
-    <h4>Cookies</h4>
-    <div id='txtCookies'></div>
+    <!-- application infos -->
+    <form id="sctAppInfos" class="row g-1">
+      <div>
+        <label for="txtDomain" class="col-sm-2 col-form-label">Domain</label>
+        <input type="text" readonly class="form-control-plaintext" id="txtDomain" value="">
+      </div>
+      <div>
+        <label for="txtTitle" class="col-sm-2 col-form-label">Title</label>
+        <input type="text" readonly class="form-control-plaintext" id="txtTitle" value="">
+      </div>
+      <div>
+        <label for="txtKeywords" class="col-sm-2 col-form-label">Keywords</label>
+        <input type="text" readonly class="form-control-plaintext" id="txtKeywords" value="">
+      </div>
+    </form>
+
+    <!-- technologies infos -->
+  <table id="sctTechnologyInfos" class="table table-sm">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Version</th>
+        <th scope="col">Details</th>
+        <th scope="col">Category</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  
+  <!-- librairies infos -->
+  <table id="sctLibrairiesInfos" class="table table-sm">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Version</th>
+        <th scope="col">Details</th>
+        <th scope="col">Script name</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+    <!-- cookies infos -->
+    <table id="sctCookiesInfos" class="table table-sm">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Cookie name</th>
+          <th scope="col">Expires</th>
+          <th scope="col">Max-age</th>
+          <th scope="col">Domain</th>
+          <th scope="col">Path</th>
+          <th scope="col">Secure</th>
+          <th scope="col">HttpOnly</th>
+          <th scope="col">SameSite</th>
+          <th scope="col">Session entropy</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>  
 
   </body>
 </html>

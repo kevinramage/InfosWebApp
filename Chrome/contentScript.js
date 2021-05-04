@@ -8,10 +8,11 @@ idb.openDB('technoInfoApp', 1, {
         db.createObjectStore('languages');
         db.createObjectStore('fingerprints');
     },
-}).then(db => {
+}).then(async db => {
 
     // Create application
     const application = new Application();
+    await application.read(db);
 
     // Run DOM analyze
     const domAnalyzer = new DomAnalyzer(db, application);
@@ -21,6 +22,7 @@ idb.openDB('technoInfoApp', 1, {
     chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
         if (request.type === "GetApplication") {
             sendResponse(domAnalyzer.application);
+
         } else if (request.type === "EmitHeaders") {
             
             // Run headers analyzer

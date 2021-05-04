@@ -92,7 +92,7 @@ class HeadersAnalyzer {
 
                 // Detect name with a regex
                 const regex = /(?<app>[\w\-_\+\-'@\.%$&]+?)\/(?<version>[0-9]+(\.[0-9]+)*)\s*(\((?<details>.+)\))?/g;
-                const match = regex.exec(header.value);
+                const match = regex.exec(serverHeader.value);
                 if (match && match.groups) {
                     technology.name = match.groups.app;
                     technology.version = match.groups.version;
@@ -119,7 +119,7 @@ class HeadersAnalyzer {
             
             // Detect version
             const regex = /(?<version>[0-9]+(\.[0-9]+)*)/g;
-            const match = regex.exec(header.value);
+            const match = regex.exec(serverHeader.value);
             if (match && match.groups) {
                 technology.version = match.groups.version;
             }
@@ -138,7 +138,7 @@ class HeadersAnalyzer {
             
             // Detect version
             const regex = /(?<version>[0-9]+(\.[0-9]+)*)/g;
-            const match = regex.exec(header.value);
+            const match = regex.exec(serverHeader.value);
             if (match && match.groups) {
                 technology.version = match.groups.version;
             }
@@ -160,7 +160,7 @@ class HeadersAnalyzer {
             
             // Detect version
             const regex = /(?<version>[0-9]+(\.[0-9]+)*)/g;
-            const match = regex.exec(header.value);
+            const match = regex.exec(serverHeader.value);
             if (match && match.groups) {
                 technology.version = match.groups.version;
             }
@@ -175,7 +175,7 @@ class HeadersAnalyzer {
         let serverHeader = headers.find(header => { return header.name.toLowerCase() == "x-httpd-modphp" });
         if (serverHeader) {
 
-            // Add technology
+            // Add language
             this.application.addLanguage("Php");
         }
     }

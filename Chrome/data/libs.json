@@ -12,5 +12,10 @@
     { "name": "chartJS", "version": "4.4.1", "versionDetails": "uncompressed", "checksum": "3341155e6ce2afbcd91a7a757d197958d5a0173b2b6b2f9e764828717ac39904" },
     { "name": "chartJS", "version": "4.4.1", "versionDetails": "minified", "checksum": "09f704443e0ebf8fa529b59b62a5c3e9a14cf4ce7580de06504b4386458004ca" },
     { "name": "chartJS", "version": "4.4.1", "versionDetails": "bundle uncompressed", "checksum": "2e5d16bf348589c7f94404a122cb83dbcd42dd5b83de780c541d457ecfcf3a06" },
-    { "name": "chartJS", "version": "4.4.1", "versionDetails": "bundle minified", "checksum": "5c5dbd081c14d4c58b686127b042e8814e98eab71ce670a4861c7cf6714c2034" }
+    { "name": "chartJS", "version": "4.4.1", "versionDetails": "bundle minified", "checksum": "5c5dbd081c14d4c58b686127b042e8814e98eab71ce670a4861c7cf6714c2034" },
+
+    { "name": "angular", "version": "1.8.2", "versionDetails": "minified", "checksum": "7b529d2fb970c54dff4ebd5e71a41e7a8cdbc8410876be674bdf21079134132b"},
+    { "name": "angular", "version": "1.8.2", "versionDetails": "uncompressed", "checksum": "237656fae6e39d02cd71cbcfbf91b7964eba5796aafca1bfcfff3b054ce3fed6"},
+    { "name": "angular", "version": "1.2.32", "versionDetails": "minified", "checksum": "f73885c78c33f2cfb6670b4df0b5a36968388b31e791a64a4bb1f93df9041d71"},
+    { "name": "angular", "version": "1.2.32", "versionDetails": "uncompressed", "checksum": "9f9e64ba82e596cff0f91c2cf856e99cf11951569e8770e4b963ed4463d507c0"}
 ]
